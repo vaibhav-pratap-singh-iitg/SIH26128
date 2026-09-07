@@ -126,30 +126,3 @@ saturating input dominates the score. Categories: 0-29 LOW, 30-59 MEDIUM,
 30-day) are all defined once in `src/config.py` — nothing is hard-coded
 elsewhere.
 
-## Demonstrating this to judges
-
-1. Open the dashboard - the KPI row and hotspot map already show a handful of
-   simulated outbreak clusters, so there's something visually meaningful
-   immediately (no need to submit anything first).
-2. Open the **Risk Overview** tab to show the top-risk villages with a
-   plain-language breakdown of *why* each one is flagged.
-3. Go to **Submit New Report**, enter a report with an obvious red flag
-   (e.g. several deaths out of a small affected count), and show the result
-   card: the ML score, whether the safety rule overrode it, and the
-   recommended action.
-4. Go to the **Hotspot Map** tab and click **Simulate New Outbreak** on a
-   village of your choice. Each generated report is triaged live through the
-   real pipeline, so you can walk judges through the story as it happens:
-   individual reports come in → high-concern reports increase → the
-   village's risk score climbs → the hotspot becomes visible on the map -
-   the whole early-warning loop, live.
-5. Use the **Regional Risk Ranking** and **Trends** tabs to show this scales
-   from village to block to district, and that the system tracks change over
-   time rather than just a single snapshot.
-
-Two things worth being upfront about if asked: this MVP triages/aggregates
-rather than diagnoses a specific disease, and it runs on synthetic data
-because real village-level surveillance data isn't available for a
-build like this - both are reasonable, common scoping choices for a
-hackathon prototype, and the architecture (feature list, rule set, risk
-formula) is designed to carry over directly once real data is available.

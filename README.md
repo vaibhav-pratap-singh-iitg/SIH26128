@@ -1,4 +1,4 @@
-# SIH26128 github repository
+# SIH26128 TEAM PASHU RAKSHAK
 
 # Livestock Health Early Warning System (MVP)
 
